@@ -24,6 +24,7 @@ a:hover {
 }
 
 body {
+  background-image: url(./assets/patternburger.jpg);
   margin: 0;
   display: flex;
   place-items: center;

@@ -2,6 +2,7 @@ import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
 import "./ItemList.css";
 import ItemCount from "../ItemCount/ItemCount";
+import AddToCart from "../AddToCart/AddToCart";
 function ItemList({ items }) {
   // Crear un objeto para agrupar los elementos por categoría
   const groupedItems = items.reduce((acc, item) => {
@@ -25,6 +26,7 @@ function ItemList({ items }) {
                   <Card.Text>Precio: ${item.price}</Card.Text>
                   <ItemCount />
                 </Card.Body>
+                <AddToCart />
               </Card>
             ))}
           </div>
