@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router-dom";
-
+import CartList from "../CartList/CartList";
 function CartWidget() {
   const [show, setShow] = useState(false);
 
@@ -17,9 +17,9 @@ function CartWidget() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Mi Carrito</Modal.Title>
+          <Modal.Title>Mi Pedido</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <CartList />
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             <Link to={"/Pedidos"} className="nav-link">
