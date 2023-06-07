@@ -10,7 +10,7 @@ export const CartContextProvider = ({ children }) => {
   const agregarAlCart = (newProduct) => {
     const indexProduct = cartList.findIndex(
       (product) => product.id === newProduct.id
-    ); //  -1
+    );
 
     if (indexProduct === -1) {
       setCartList([...cartList, newProduct]);
@@ -19,19 +19,20 @@ export const CartContextProvider = ({ children }) => {
       setCartList([...cartList]);
     }
   };
-  s;
+
   const cantidadTotal = () =>
     cartList.reduce(
-      (cantidadTotal, objProducto) => (cantidadTotal += objProducto.quantity),
+      (cantidadTotal, objProducto, index) =>
+        (cantidadTotal += objProducto.quantity),
       0
     );
-  const precioTotal = () => {
+  function precioTotal() {
     return cartList.reduce(
       (totalPrice, objProducto) =>
         (totalPrice += objProducto.price * objProducto.quantity),
       0
     );
-  };
+  }
 
   const eliminarProducto = (pid) => {
     const indexProduct = cartList.findIndex((product) => product.id === pid);
