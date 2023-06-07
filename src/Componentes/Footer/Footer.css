@@ -1,0 +1,33 @@
+.icono {
+  transition: transform 300ms ease-out;
+}
+.icono:hover {
+  transform: translate(0px, 0px) scale(1.2, 1.2);
+}
+
+.icono-con {
+  size: 20%;
+  width: 20%;
+  height: auto;
+}
+
+.logochamaco {
+  width: 10rem;
+  height: 10rem;
+}
+
+#wp:hover {
+  color: #02ad27;
+}
+
+#mail:hover {
+  color: red;
+}
+
+#ig:hover {
+  color: #008fc7;
+}
+
+#fb:hover {
+  color: #008fc7;
+}
