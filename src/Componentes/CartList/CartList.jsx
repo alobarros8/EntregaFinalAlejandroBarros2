@@ -62,7 +62,6 @@ const CartList = () => {
         <div>
           {cartList.map((product) => (
             <li key={product.id}>
-              <img src={product.foto} alt="imagen" className="w-25" />
               Nombre: {product.name} - Cantidad: {product.quantity}
               <button
                 className="btn btn-danger"
@@ -73,7 +72,7 @@ const CartList = () => {
               </button>
             </li>
           ))}
-          <h3>Precio Total: {precioTotal()}</h3>
+          <h3>Precio Total: {parseInt(precioTotal())}</h3>
           <button onClick={vaciarCarrito}>Vaciar CArrito</button>
 
           <form onSubmit={handleSubmit}>
@@ -103,7 +102,6 @@ const CartList = () => {
               name="repetirMail"
               placeholder="repetir el mail "
               onChange={() => {}}
-              // value={''}
             />
             <button>Generar Orden</button>
           </form>
