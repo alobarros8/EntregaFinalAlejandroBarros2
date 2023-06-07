@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import CartCountainer from "./components/CartContainer/CartCountainer";
-import { FormContainer } from "./components/FormContainer/FormContainer";
+import NavBar from "./Componentes/Navbarjs/Navbarjs";
+import ItemListContainer from "./Componentes/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./Componentes/ItemDetailContainer/ItemDetailContainer";
+import CartList from "./Componentes/CartList/CartList";
+import { FormContainer } from "./Componentes/FormContainer/FormContainer";
 import { CartContextProvider } from "./context/CartContext";
 
 import "./App.css";
@@ -22,7 +22,7 @@ function App() {
 
             <Route path="/detail/:pid" element={<ItemDetailContainer />} />
             <Route path="/contacto" element={<FormContainer />} />
-            <Route path="/cart" element={<CartCountainer />} />
+            <Route path="/cart" element={<CartList />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

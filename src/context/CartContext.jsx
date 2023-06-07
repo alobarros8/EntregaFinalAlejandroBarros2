@@ -24,8 +24,7 @@ export const CartContextProvider = ({ children }) => {
     cartList.reduce(
       (cantidadTotal, objProducto) => (cantidadTotal += objProducto.quantity),
       0
-    ); // retorna un valor
-
+    );
   const precioTotal = () => {
     return cartList.reduce(
       (totalPrice, objProducto) =>
