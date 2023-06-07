@@ -10,7 +10,7 @@ const ItemDetail = ({ Items }) => {
   const { agregarAlCart } = useCartContext();
 
   const onAdd = (cantidad) => {
-    agregarAlCart({ ...item, quantity: cantidad });
+    agregarAlCart({ ...Items, quantity: cantidad });
     actualizarTieneCantidad(true);
   };
 
